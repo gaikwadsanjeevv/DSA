@@ -135,15 +135,17 @@ int main() {
 }
 Output: Grade: C
 ```
-If marks are less than 25, it prints "Grade: F."
-If marks are between 25 and 44 (inclusive), it prints "Grade: E."
-If marks are between 45 and 49 (inclusive), it prints "Grade: D."
-If marks are between 50 and 59 (inclusive), it prints "Grade: C."
-If marks are between 60 and 69 (inclusive), it prints "Grade: B."
+If marks are less than 25, it prints "Grade: F."  
+If marks are between 25 and 44 (inclusive), it prints "Grade: E."  
+If marks are between 45 and 49 (inclusive), it prints "Grade: D."  
+If marks are between 50 and 59 (inclusive), it prints "Grade: C."  
+If marks are between 60 and 69 (inclusive), it prints "Grade: B."  
 If marks are 70 or higher, it prints "Grade: A."
 If marks are outside the valid range, it prints "Invalid marks entered."
-The provided code for grading based on marks is functional, but it can be simplified for better readability and maintainability. In the current code, there are several redundant comparisons of marks with specific values. For example, when checking for grades E, C, B, and A, you have to repeatedly check marks >= X && marks <= Y, which can be error-prone and hard to maintain as the grade ranges change.
-We can refactor the code, we can remove the lower bounds and check only the upper bounds for each grade as the code flow is such that we move along the conditions only after satisfying the previous one.
+The provided code for grading based on marks is functional, but it can be simplified for better readability and maintainability.  
+In the current code, there are several redundant comparisons of marks with specific values.  
+For example, when checking for grades E, C, B, and A, you have to repeatedly check marks >= X && marks <= Y, which can be error-prone and hard to maintain as the grade ranges change.  
+We can refactor the code, we can remove the lower bounds and check only the upper bounds for each grade as the code flow is such that we move along the conditions only after satisfying the previous one.  
 
 #### More Optimized - to reduce several redundant
 ```cpp
@@ -289,7 +291,7 @@ int main() {
     return 0;
 } ```
 
-
+### Switch case Demo 4 - nested Switch
 ```cpp
 #include <iostream>
 using namespace std;
