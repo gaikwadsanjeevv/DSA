@@ -266,7 +266,7 @@ int main() {
 
 Output: Good!
 ```
-### Duplicate switch case
+### Duplicate switch case   
 
 ```cpp
 #include <iostream>
@@ -289,10 +289,11 @@ int main() {
             cout << "Invalid day." << endl;
     }
     return 0;
-} ```
+} ```  
 
 ## Switch case Demo 4 - nested Switch
 --------------------------------------
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -319,9 +320,9 @@ int main() {
     }
 
     return 0;
-}```
-## =======================================================
-## Array and Strings : 
+}``` 
+## =======================================================  
+## Array and Strings :   
 
 An array is a collection of elements of the same type stored in contiguous memory locations. Arrays can hold primitive types (e.g., int, float, char) or even objects.
 ```cpp
