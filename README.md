@@ -292,7 +292,9 @@ int main() {
             cout << "x is 1." << endl;
             switch (y) {
                 case 1:
-                    cout << "y is 1." << endl;
+                    cout << "y is 1." << end
+                    
+                    l;
                     break;
                 default:
                     cout << "y is not 1." << endl;
@@ -305,5 +307,39 @@ int main() {
     return 0;
 }
 
+## =======================================================
+## Array and Strings : 
 
+An array is a collection of elements of the same type stored in contiguous memory locations. Arrays can hold primitive types (e.g., int, float, char) or even objects.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50}; // Array declaration and initialization
+    
+    // Accessing and displaying array elements
+    for (int i = 0; i < 5; i++) {
+        cout << "Element " << i << ": " << numbers[i] << endl;
+    }
+    return 0;
+}
+
+(a) Strings as Character Arrays
+A string is essentially an array of characters terminated by a null character '\0'.
+#include <iostream>
+using namespace std;
+
+int main() {
+    char name[20] = "John Doe"; // Character array (string)
+    
+    cout << "Name: " << name << endl;
+
+    // Modifying the string
+    name[5] = 'X';
+    cout << "Modified Name: " << name << endl;
+
+    return 0;
+}
+ 
 
