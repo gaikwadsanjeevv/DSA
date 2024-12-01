@@ -291,7 +291,8 @@ int main() {
     return 0;
 } ```
 
-### Switch case Demo 4 - nested Switch
+## Switch case Demo 4 - nested Switch
+--------------------------------------
 ```cpp
 #include <iostream>
 using namespace std;
@@ -318,8 +319,7 @@ int main() {
     }
 
     return 0;
-}
-```
+}```
 ## =======================================================
 ## Array and Strings : 
 
