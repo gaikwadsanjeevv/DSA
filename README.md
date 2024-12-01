@@ -342,4 +342,153 @@ int main() {
     return 0;
 }
  
+## Funtion: 
 
+#include<bits/stdc++.h>
+using namespace std;
+
+int calc(int num1, int num2) {
+int num3 = num1 + num2;
+return num3;
+}
+
+
+int main() {
+    int num1, num2;
+    cin >> num1 >> num2;
+   int res =  calc(num1, num2);
+    cout << res;
+    return 0;
+
+}
+Every function without void and return signature must have a return type. 
+but if u add a fucntion where u find a if statenment like below and the condition wont get true then the function would not find a return type, 
+and throw a garbage value to avoid that u must add return type as below.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int maxx(int num1, int num2) 
+{
+    if (num1 >= num2) 
+    {
+        return num1;   //
+    }
+    return num2;   //we need this because above return conditon has become invalid due to false statement and to avoid garbage value in output.
+}
+
+int main() 
+{
+    int num1, num2;
+    cin >> num1 >> num2;
+    int maximum = maxx (num1, num2);
+    cout << maximum;
+    return 0;
+}
+
+## Pass by value and pass by Ref
+
+### Pass by value : 
+in which not the original number or value but its copy is sent to the function.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSome(int num) {
+    cout << num << endl;
+    num += 5;
+    cout << num << endl;
+    num += 5;
+    cout << num << endl;
+}
+
+int main() 
+{
+    int num = 10;
+    doSome(num);
+    cout << num << endl;
+    return 0;
+}
+
+//
+10
+15
+20
+10
+
+-------------------------------
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSome(string s)
+{
+s[0] = 't';
+cout << s << endl;
+}
+int main() 
+{
+string s = "Raj";
+doSome(s);
+cout << s << endl;
+return 0;
+}
+
+## Pass by reference - if i dont want to take the copy but original.
+we can write & prefix to data.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSome(string &s)
+{
+s[0] = 't';
+cout << s << endl;
+}
+int main() 
+{
+string s = "Raj";
+doSome(s);
+cout << s << endl;
+return 0;
+}
+//
+taj
+taj
+
+// when u write &s here you copy the address of the original and so original value is made changed. is passed by reference.
+
+----------------------------
+Now in above u seen, number, string can go pass by value or pass by reference, but for array : 
+### Array always go by pass by reference so u dont have to write & just write the array in function as below:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+//array always pass by reference
+
+void doSomething(int arr[], int n) 
+{
+    arr[0] += 100;
+    cout << "value inside function:  " << arr[0] << endl;
+}
+
+int main() 
+{
+    int n = 5;
+    int arr[n];
+    for(int i = 0; i < n; i = i +1)
+    {
+        cin >> arr[i];
+    }
+    doSomething(arr, n);
+    cout << "value inside int main: " << arr[0] << endl;
+    return 0;
+}
+
+//
+105
+105
+
+
+ 
