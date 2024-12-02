@@ -59,14 +59,15 @@ public class list {
         System.out.println(words.contains("Cat"));
         System.out.println(words.indexOf("Cat"));
 }
-}```
+}
+```
+// As the List is immutable, we have to go with list implementation
+// and we can convert the above list 'words' into immutable as follow:
 
-### As the List is immutable, we have to go with list implementation
-and we can convert the above list 'words' into immutable as follow:
 ```java
   List<String> wordsArrayList = new ArrayList<String>(words);;
         List<String> wordsLinkedList = new LinkedList(words);
-        List<String> wordsVector = new Vector<String>(words);```
+        List<String> wordsVector = new Vector<String>(words); ```
 
 
-#### Underneath an ArrayList and Vector is an Array. In which we can access any element faster based on index, but adding and deleting the elements in array is time consuming, and beneath a linked list is likedlist- for linked list inserting and deleting an element is much more easier.
+/* Underneath an ArrayList and Vector is an Array. In which we can access any element faster based on index, but adding and deleting the elements in array is time consuming, and beneath a linked list is likedlist- for linked list inserting and deleting an element is much more easier. */
