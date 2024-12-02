@@ -1,5 +1,5 @@
 
-## C0llections: 
+## Collections: 
 ### List
 ### Set
 ### Queue
@@ -67,7 +67,11 @@ public class list {
 ```java
   List<String> wordsArrayList = new ArrayList<String>(words);;
         List<String> wordsLinkedList = new LinkedList(words);
-        List<String> wordsVector = new Vector<String>(words); ```
+        List<String> wordsVector = new Vector<String>(words);
+```
 
 
 /* Underneath an ArrayList and Vector is an Array. In which we can access any element faster based on index, but adding and deleting the elements in array is time consuming, and beneath a linked list is likedlist- for linked list inserting and deleting an element is much more easier. */
+
+Now when to use ArrayList and linkedList - When you have very few insertion and deletions very few modification in the list and you want to access the elements based on position we go dfor array list.
+If we have numbers of Addition and deletion of elememts we would take linked list.
