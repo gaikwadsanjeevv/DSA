@@ -224,7 +224,7 @@ jshell> Collections.sort(rannumsAI)
 jshell> rannumsAI
 rannumsAI ==> [76, 90, 97, 101, 102, 204, 304]
 ```
-### Programme to demonstarte sorting : 
+### Programme to demo sorting : 
 
 Make 2 files:
 ```java
@@ -285,13 +285,14 @@ public class Student implements Comparable<Student>  {
     }
 }
 ```
-Now to use compare sorting for an Non-generalised objects of List we go with Implementing Comparable of the object:
-this: Refers to the current instance of the Student object on which the method is invoked.
-that: Refers to the Student object passed as a parameter to the compareTo method.
-For example:
-Student student1 = new Student(101, "Sanjeev");
-Student student2 = new Student(102, "Raju");
-student1.compareTo(student2);
-Here, this refers to student1.
-that refers to student2.
+Now to use compare sorting for an Non-generalised objects of List we go with Implementing Comparable of the object:  
+this: Refers to the current instance of the Student object on which the method is invoked.  
+that: Refers to the Student object passed as a parameter to the compareTo method.  
+For example:  
+Student student1 = new Student(101, "Sanjeev");  
+Student student2 = new Student(102, "Raju");  
+student1.compareTo(student2);  
+Here, this refers to student1.  
+that refers to student2.  
+
 
