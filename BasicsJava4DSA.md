@@ -144,3 +144,25 @@ but when you want to delete or remove elements, enhanced for loop wont help much
             }
 
 ```
+
+### Puzzles in List: 
+
+we are creating a list of combinations of different data values as : 
+ Paste belo codes on Jshell
+ ```jshell
+jshell> List value = List.of("A",'A',1,1.0)
+jshell>value.get(2)
+jshell> value.get(2) instanceof Integer
+$3 ==> true   //shows we cant store primitive values in List hows it stored than, concept of Autoboxing - all this primitive values get autoboxed and a wrapper class is created.
+
+### Primitive Data Type   	Wrapper Class
+        byte	              Byte
+       short	              Short
+       int             	   Integer
+       long	               Long
+      float	               Float
+      double           	   Double
+      char            	    Character
+      boolean	             Boolean
+
+```
