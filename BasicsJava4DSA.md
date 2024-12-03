@@ -210,5 +210,88 @@ $14 ==> true
 
 jshell> numsAI
 numsAI ==> [103, 104, 105]
+```
+### List and ArrayList - Sorting
+```jshell
+jshell> List<Integer> rannums = List.of(102,90, 76, 204, 304, 101, 97)
+rannums ==> [102, 90, 76, 204, 304, 101, 97]
 
+jshell> List<Integer> rannumsAI = new ArrayList<>(rannums);
+rannumsAI ==> [102, 90, 76, 204, 304, 101, 97]
+
+jshell> Collections.sort(rannumsAI)
+
+jshell> rannumsAI
+rannumsAI ==> [76, 90, 97, 101, 102, 204, 304]
+```
+### Programme to demonstarte sorting : 
+
+Make 2 files:
+```java
+Main.java
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Student> students = List.of(
+                new Student(301, "Sanjeev"),
+                new Student(101, "Raju"),
+                new Student(204, "Jack"));
+ArrayList<Student> studentAI = new ArrayList<>(students);
+        Collections.sort(studentAI);
+        // Print each Student
+        System.out.println(studentAI);
+
+        }
+    }
+
+Student.java
+public class Student implements Comparable<Student>  {
+    private int id;
+    private String name;
+
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{id=" + id + ", name='" + name + "'}";
+    }
+
+    @Override
+    public int compareTo(Student that) {
+        return Integer.compare(this.id,that.id);
+    }
+}
+```
+Now to use compare sorting for an Non-generalised objects of List we go with Implementing Comparable of the object:
+this: Refers to the current instance of the Student object on which the method is invoked.
+that: Refers to the Student object passed as a parameter to the compareTo method.
+For example:
+Student student1 = new Student(101, "Sanjeev");
+Student student2 = new Student(102, "Raju");
+student1.compareTo(student2);
+Here, this refers to student1.
+that refers to student2.
 
