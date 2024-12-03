@@ -120,4 +120,27 @@ for loop, for each, Iterator hasNext
          }
 ```
 
+### Where to use the above loops for Ietrator: 
 
+If i have to fine words ending with at i can use enhanced loop
+```java
+List<String> newList = List.of("Bat", "Cat", "Hen");
+List<String> newArrayList = new ArrayList<>(newList);
+
+for(String word:newList) {
+if(word.endsWith("at")) {
+System.out.println(word);
+}
+}
+```
+but when you want to delete or remove elements, enhanced for loop wont help much. so wen can use enhanced loop to find elements or presence.
+
+```java
+ Iterator<String> words_Iterator = wordsArrayList.iterator();
+         while(words_Iterator.hasNext()) {
+            if(words_Iterator.next().endsWith("at")) {
+                           words_Iterator.remove();
+                           System.out.println(words_Iterator);
+            }
+
+```
