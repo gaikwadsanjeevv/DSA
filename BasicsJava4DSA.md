@@ -154,15 +154,61 @@ jshell> List value = List.of("A",'A',1,1.0)
 jshell>value.get(2)
 jshell> value.get(2) instanceof Integer
 $3 ==> true   //shows we cant store primitive values in List hows it stored than, concept of Autoboxing - all this primitive values get autoboxed and a wrapper class is created.
+jshell> value.get(2) instanceof Integer
+$3 ==> true
 
+jshell> value.get(3) instanceof Double
+$4 ==> true
+
+jshell> value.get(1) instanceof  Character
+$5 ==> true
+```
+following is the table of conversion of primitive datatype to Wrapper after autoboxing.
 ### Primitive Data Type   	Wrapper Class
-        byte	              Byte
-       short	              Short
-       int             	   Integer
-       long	               Long
+      byte	              Byte
+      short	              Short
+      int             	   Integer
+      long	               Long
       float	               Float
       double           	   Double
       char            	    Character
       boolean	             Boolean
 
+If i want to have specific kind of values, thats where we do generalization
+so it allow only of one kind.
+```jshell
+jshell> List<String> textValues = List.of("A", 2)
+|  Error:
+|  incompatible types: inference variable E has incompatible bounds
+|      equality constraints: java.lang.String
+|      lower bounds: java.lang.Integer,java.lang.String
+|  List<String> textValues = List.of("A", 2);
+|                            ^-------------^
 ```
+
+```jshell
+jshell> List<Integer> nums = List.of(101,102,103,104,105)
+jshell> List<Integer> numsAI = new ArrayList<>(nums);
+numsAI ==> [101, 102, 103, 104, 105]
+jshell> numsAI.remove(101)
+|  Exception java.lang.IndexOutOfBoundsException: Index 101 out of bounds for length 5
+|        at Preconditions.outOfBounds (Preconditions.java:64)
+|        at Preconditions.outOfBoundsCheckIndex (Preconditions.java:70)
+|        at Preconditions.checkIndex (Preconditions.java:266)
+|        at Objects.checkIndex (Objects.java:359)
+|        at ArrayList.remove (ArrayList.java:504)
+|        at (#11:1)
+
+jshell> numsAI.remove(0)
+$12 ==> 101
+
+jshell> numsAI
+numsAI ==> [102, 103, 104, 105]
+//we can remove element by index and if we want to remove by value we do as
+jshell> numsAI.remove(Integer.valueOf(102))
+$14 ==> true
+
+jshell> numsAI
+numsAI ==> [103, 104, 105]
+
+
