@@ -1,7 +1,7 @@
 ## Java Collections
 Java Collections provide a framework for organizing, managing, and manipulating groups of objects in various data structures, such as lists, sets, and maps. It enables efficient storage, retrieval, and operations on collections of data.  
 
-#### lIMITATION OF ARRAY:   
+#### LIMITATION OF ARRAY:   
 - Cannot change size
 - To increase or decrease the array u have to make another array-
 - We want an array which can change size dynamically
@@ -17,11 +17,11 @@ Java Collections provide a framework for organizing, managing, and manipulating 
 
 ### Collection framework in Java 
 - Java provides colllection framework in form of interfaces and classes which are organized in the form of a hierarchy.
-- 
+
 ![image](https://github.com/user-attachments/assets/280621de-f65b-4378-acbf-64d5600eb631)
 -these collection classes and interfaces are generic since collection also support any type of object.
-Methods of interface colelction :
-Ex :  ![image](https://github.com/user-attachments/assets/f8845dba-1891-460e-9057-a08f5bcb52eb)
+Methods of interface collection :
+Ex :  ![image](https://github.com/user-attachments/assets/f8845dba-1891-460e-9057-a08f5bcb52eb)  
 - add(E e) c1.addAll(c2)  
 - addAll(collection<E>c)  
 - remove(object 0)  c1.removeAll(c2)  
@@ -63,7 +63,7 @@ Ex :  ![image](https://github.com/user-attachments/assets/f8845dba-1891-460e-905
 - peek() //just want to know what is element at first place if element is not there says null  
 - element() // does same like peek but throws exception if element is not there.
   
-### ArrayList  243
+### ArrayList  
 
 
 
