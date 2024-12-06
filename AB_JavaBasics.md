@@ -32,9 +32,38 @@ Ex :  ![image](https://github.com/user-attachments/assets/f8845dba-1891-460e-905
 - contains(object o) //will check contains a particular object in collection
 - containsAll(collection<E> c) //checks whether a collection is completely present in other or not
 - equals(object o) // compares if 2 colllections are same or not  
-- size()  
+  size()  
 - iterator() //visiting through all the elements of collection    
 - toArray() //you can convert an array to an collection  
+
+### List Interface  
+- List Interface extends collection framweork  (means what ever methods we read above also present for List with addition s more methods)
+- ![image](https://github.com/user-attachments/assets/4b88af42-1f1a-45eb-bfde-442c803e7eca)
+- add(int index, E e) //will add an element at an index
+- addAll(int index, collection<E>e) //i want to add more than one element starting from any index
+- remove(int index) //remove an object at given index
+- get(int index) //to know what object is there at particular index
+- set(int index, E e) //we can chnage an object at a given index
+- Difference between add and set - add will add an new element by making a space and set will change an element at a particular index.
+- sublist(int from int to) //i want a part of list from a place to other it wont remove them just we get the copy of them.
+- indexOf(object o) - //getting index of particular object
+- LastIndexOf()- //searching from last
+- ListIterator() -//will aloow you to iterate the elements in either direction. bidirectional.
+- listIterator(int Index)- //we can start from a particular index either forward or backward.
+- Now we all saw some extra methods for list because of indexes.
+
+  ### Set extends collection
+  -set extends collection and it dont have extra methods it extends only collection methods.
+  - Unorder - unique collection of objects- no indexs
+  - ### Queue extends collection:
+  - it has all methods of collection with some new elements.  
+- add(E e) //wont ask just add at the end of collection
+- poll() //remove first object if poll is empty will return null  
+- remove() // remove first object but here when element is not there it thorws exception - no such elementexception
+- peek() //just want to know what is element at first place if element is not there says null  
+- element() // does same like peek but throws exception if element is not there.
+  
+### ArrayList  243
 
 
 
