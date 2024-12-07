@@ -1,3 +1,58 @@
+### Complete Java : 
+1. Variables  
+A variable is a container that stores data in memory, which can be accessed and manipulated during program execution. 
+ Variables have: NAME, TYPE, VALUE
+
+2. Literals  
+A literal is a fixed value directly written in the code that represents data. They are constants and are assigned to  
+ variables or used in expressions.
+Types of Literals:  
+Integer literals: Whole numbers (e.g., 10, -20, 0).  
+Floating-point literals: Numbers with decimal points (e.g., 3.14, -2.5).  
+Character literals: A single character enclosed in single quotes (e.g., 'A', 'z').  
+String literals: A sequence of characters enclosed in double quotes (e.g., "Hello, World!").  
+Boolean literals: true or false.  
+Null literal: null, which represents the absence of a value for object references.
+```java
+int number = 100;          // 100 is an integer literal
+double pi = 3.14159;       // 3.14159 is a floating-point literal
+char grade = 'A';          // 'A' is a character literal
+String message = "Hi!";    // "Hi!" is a string literal
+boolean isValid = true;    // true is a boolean literal
+```
+![image](https://github.com/user-attachments/assets/c22f3e55-d167-4c7a-bc4f-24604dabb430)  
+Programme to convert Integer to Binary  
+```java
+import java.util.Scanner;
+
+public class IntegerToBinary {
+    public static void main(String[] args) {
+        // Create a scanner object to take user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user for an integer input
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
+
+        // Convert the integer to binary using Integer.toBinaryString()
+        String binaryRepresentation = Integer.toBinaryString(number);
+
+        // Display the result
+        System.out.println("Binary representation of " + number + " is: " + binaryRepresentation);
+        
+        scanner.close();
+    }
+}
+```
+![image](https://github.com/user-attachments/assets/c4f762b8-5856-436b-a992-31085ba52b2a)  
+
+- Java is compiled as well interpreted - Hybrid. Java is first compiled in to .class file (byte code - which is not executable file but error free file) and then JVM interprete the file to run. The JVM is not generating any new file converting into machine code by JIT Compiler and execute the file. I C And C++ files they have system calls for a particular OS and so they are platform dependent.  
+  ![image](https://github.com/user-attachments/assets/ee6af006-a36a-4ff3-ae10-388a2905af66)
+  
+
+
+
+================================================================================
 ## Java Collections
 Java Collections provide a framework for organizing, managing, and manipulating groups of objects in various data structures, such as lists, sets, and maps. It enables efficient storage, retrieval, and operations on collections of data.  
 
