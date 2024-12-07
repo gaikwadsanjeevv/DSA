@@ -49,8 +49,144 @@ public class IntegerToBinary {
 - Java is compiled as well interpreted - Hybrid. Java is first compiled in to .class file (byte code - which is not executable file but error free file) and then JVM interprete the file to run. The JVM is not generating any new file converting into machine code by JIT Compiler and execute the file. I C And C++ files they have system calls for a particular OS and so they are platform dependent.  
   ![image](https://github.com/user-attachments/assets/ee6af006-a36a-4ff3-ae10-388a2905af66)
   
+### Basic Programmes  
+#### Calculate Area of Triangle  
+```java
+package expression;
+
+import java.lang.*;
+import java.util.*;
 
 
+public class Expression 
+{
+   /* public static void main(String[] args) 
+    {
+        float base,height,area;
+        System.out.println("Enter Base and Height");
+        Scanner sc=new Scanner(System.in);
+        base=sc.nextFloat();
+        height=sc.nextFloat();
+        area=base*height*0.5f;
+        //area=1f/2f*base*height;
+        //area=base*height/2;
+        System.out.println("Area of Triangle is "+area);
+    }
+    */
+    
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+         
+        int a,b,c;
+        double s,area;
+        
+        System.out.println("Enter 3 Sides of a Triangle");
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+        
+        s=(a+b+c)/2f;
+        
+        area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        
+        System.out.println("Area of Triangle is "+area);
+        
+         
+    }
+}
+```
+#### 2. Quadratic Equation :  
+```java
+package expression1;
+
+import java.lang.*;
+import java.util.*;
+
+public class Expression1 {
+
+   
+    public static void main(String[] args) 
+    {
+       Scanner sc=new Scanner(System.in);
+       
+       int a,b,c;
+       double r1,r2;
+       
+       System.out.println("Enter the values of a ,b and c");
+       a=sc.nextInt();
+       b=sc.nextInt();
+       c=sc.nextInt();
+       
+       r1=(-b+Math.sqrt(b*b-4*a*c))/(2*a);
+       r2=(-b-Math.sqrt(b*b-4*a*c))/(2*a);
+       
+       System.out.println("Roots are "+r1+" "+r2 );
+    }
+    
+}
+```
+#### Cuboid problem  
+```java
+package expression2;
+
+import java.lang.*;
+import java.util.*;
+
+
+public class Expression2 {
+
+    
+    public static void main(String[] args) 
+    {
+        Scanner sc=new  Scanner(System.in);
+        int length,breadth,height;
+        int totalArea,volume;
+        
+        System.out.println("Enter length, breadth and height");
+        length=sc.nextInt();
+        breadth=sc.nextInt();
+        height=sc.nextInt();
+        
+        totalArea=2*(length*breadth+length*height+breadth*height);
+        
+        volume=length*breadth*height;
+        
+        System.out.println("Total Area "+totalArea);
+        System.out.prinlt("Volume "+volume);
+        
+        
+    }
+    
+}
+```
+#### Increment and Decrement  
+``` java
+package incdec;
+
+public class IncDec {
+
+    public static void main(String[] args) {
+        
+        //float x=3.5f
+        //char x='A'
+        //byte x=5
+        
+        /*int x=5;
+        x++;  //++x
+        System.out.println(x);*/
+        
+        /*int x=5,y;
+        y=x++; //++x
+        System.out.println(x+" "+y);*/
+        
+        int x=5,y=4,z;
+        z=2 * x++ + 3 * ++y;
+        System.out.println(z);
+    }
+    
+}
+```
 
 ================================================================================
 ## Java Collections
