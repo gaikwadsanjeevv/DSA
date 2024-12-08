@@ -83,6 +83,7 @@ interface CombinedInterface extends Interface1, Interface2 {
 ![image](https://github.com/user-attachments/assets/f6031b9c-fc89-4b0d-a022-c3abb4a95437)  
 ![image](https://github.com/user-attachments/assets/25879b54-ef74-4ee0-b805-cdc3183795f2)  
 
+## Iterators :   
 
 
 
