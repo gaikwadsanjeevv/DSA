@@ -1,4 +1,21 @@
-### Basics C++
+### Basics C++  
+#### Basic Skeleton of Programme  
+```C++
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+
+    return 0;
+}
+```
+
+The use of return 0 in the main() function in C is important because it provides a clear and standardized way to indicate to the operating system or the program's caller that the program has completed successfully.When a C program finishes executing, control is returned to the operating system.  
+The value returned by main() is interpreted as the program's exit status:  
+0: Indicates successful completion.  
+Non-zero values: Indicate an error or abnormal termination.  
+The operating system uses this value to determine whether the program ran as expected or if there were issues.  
 ```C++
 #include<iostream>
 using namespace std;
