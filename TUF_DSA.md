@@ -16,6 +16,8 @@ The value returned by main() is interpreted as the program's exit status:
 0: Indicates successful completion.  
 Non-zero values: Indicate an error or abnormal termination.  
 The operating system uses this value to determine whether the program ran as expected or if there were issues.  
+
+#### Hello World programme
 ```C++
 #include<iostream>
 using namespace std;
@@ -25,7 +27,7 @@ int main() {
     return 0;
 }
 ```
-Input and output:  
+#### Input and output:  
 ```C++
 #include<bits/stdc++.h>
 using namespace std;
@@ -37,7 +39,7 @@ int main() {
    return 0;
 }
 ```
-Data Types  
+#### Data Types  
 ```C++
 #include <bits/stdc++.h>
 using namespace std;
@@ -115,6 +117,7 @@ int main() {
     return 0;
 }
 ```
+####  if-else
 If you need multiple conditional statment to check and execute use if-if  
 if you need to check for any one condition and execute the do if-else if  
 
@@ -142,7 +145,7 @@ else {
     return 0;
 }
 ```
-Switch  
+#### Switch  
 ```C++
 #include<bits/stdc++.h>
 using namespace std;
@@ -175,7 +178,7 @@ cout << "Invalid ";
 }
 }
 ```
-ARRAY  
+#### ARRAY  
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -200,7 +203,7 @@ int main() {
     return 0;
 }
 ```
-String also stores every character at index because string is storing characters within  
+##### String also stores every character at index because string is storing characters within  
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -213,7 +216,7 @@ int main() {
 }
 
 ```
-For Loop  
+#### For Loop  
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -226,7 +229,7 @@ int main() {
 }
 
 ```
-While loop  
+#### While loop  
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -242,7 +245,8 @@ int main() {
     return 0;
 }
 ```
-Do while :  I want atleast one time the loop to execute if the condition is false:  
+####  Do while  
+I want atleast one time the loop to execute if the condition is false:  
 ```c++
 #include <iostream>
 using namespace std;
@@ -259,7 +263,7 @@ int main() {
     return 0;
 }
 ```
-Functions  
+#### Functions  
 ```c++
 #include <iostream>
 using namespace std;
@@ -276,7 +280,7 @@ printName();
 }
 
 ``
-Parameterized function
+#### Parameterized function
 ```c++
 #include <iostream>
 using namespace std;
@@ -298,7 +302,7 @@ printName(name2);
 return 0;
 }
 ```
-Sum of numbers  
+####  Sum of numbers  
 ```c++
 #include <iostream>
 using namespace std;
@@ -325,7 +329,7 @@ int main() {
     return 0;
 }
 ```
-Always Ensuring the function always return a value  
+#### Always Ensuring the function always return a value  
 ```c++
 #include <iostream>
 using namespace std;
@@ -354,7 +358,7 @@ int main() {
     return 0;
 }
 ```
-Pass by value  
+#### Pass by value  
 ```c++
 #include<bits/stdc++.h>
 using namespace std;
@@ -372,7 +376,7 @@ cout<< s << endl;
 return 0;
 }
 ```
-Pass by reference  
+####  Pass by reference  
 
 ```c++
 #include<bits/stdc++.h>
@@ -426,7 +430,7 @@ We will avoid including the constant terms.
 We will also avoid the lower values. 
 
 ==========================================================  
-Pattern problems  
+####  Pattern problems  
 There are 4 general rules for solving a pattern-based question:   
 
 We always use nested loops for printing the patterns. For the outer loop, we count the number of lines/rows and loop for them.  
