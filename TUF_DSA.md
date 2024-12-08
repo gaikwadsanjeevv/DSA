@@ -453,8 +453,332 @@ int main()
     return 0;
 }
 ```
+------------  
+
+![image](https://github.com/user-attachments/assets/7928dac5-0002-4eb0-ad92-4f615a904b28)  
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+void pattern2(int N)
+{
+    // This is the outer loop which will loop for the rows.
+    for (int i = 0; i < N; i++)
+    {
+        // This is the inner loop which loops for the columns
+       // no. of columns = row number for each line here.
+        for (int j = 0; j <=i; j++)
+        {
+            cout << "* ";
+        }
+       
+        // As soon as stars for each iteration are printed, we move to the
+        // next row and give a line break otherwise all stars
+        // would get printed in 1 line.
+        cout << endl;
+    }
+}
+
+int main()
+{   
+    // Here, we have taken the value of N as 5.
+    // We can also take input from the user.
+    int N = 5;
+
+    pattern2(N);
+
+    return 0;
+}
+
+```
+---------------  
+
+![image](https://github.com/user-attachments/assets/5eb553d9-ac25-478e-b56d-c5e65f298f8c)  
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+void pattern3(int N)
+{
+    // This is the outer loop which will loop for the rows.
+    for (int i = 1; i <= N; i++)
+    {
+        for (int j = 1; j <=i; j++)
+        {
+            cout <<j<<" ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{   
+    int N = 5;
+
+    pattern3(N);
+
+    return 0;
+}
+```
+------------------------  
 
 
+![image](https://github.com/user-attachments/assets/9f6a1c78-dede-4969-802c-6151dec837f3)  
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+void pattern4(int N) {
+    for(int i = 0; i <= N; i++)
+     {
+        for(int j = 1; j <= i; j++) 
+        {
+            cout <<i<<" ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int N = 5;
+    pattern4(N);
+
+return 0;
+}
+```
+----------------------  
+
+![image](https://github.com/user-attachments/assets/042df236-18aa-4f0d-962a-4a898dcc026b)  
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+void pattern5(int N) {
+    for(int i = 0; i <= N; i++)
+     {
+        for(int j = N; j > i; j--) 
+        {
+            cout <<"* ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int N = 5;
+    pattern5(N);
+
+return 0;
+}
+
+```
+-----------------------  
+
+![image](https://github.com/user-attachments/assets/e19a4f12-b85c-40af-b898-fc20ca04a340)  
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+void pattern5(int N) {
+    for(int i = 0; i < N; i++)
+     {
+        for(int j = N; j > i; j--) 
+        {
+            cout <<N-j+1<<" ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int N = 5;
+    pattern5(N);
+
+return 0;
+}
+
+```
+
+------------------------  
+
+
+![image](https://github.com/user-attachments/assets/937cf69d-bca7-4dcf-97bd-d522ed7fa993)  
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+void pattern7(int N)
+{
+    // This is the outer loop which will loop for the rows.
+    for (int i = 0; i < N; i++)
+    {
+        // For printing the spaces before stars in each row
+        for (int j =0; j<N-i-1; j++)
+        {
+            cout <<" ";
+        }
+       
+        // For printing the stars in each row
+        for(int j=0;j< 2*i+1;j++){
+            
+            cout<<"*";
+        }
+        
+        // For printing the spaces after the stars in each row
+         for (int j =0; j<N-i-1; j++)
+        {
+            cout <<" ";
+        }
+        
+        // As soon as the stars for each iteration are printed, we move to the
+        // next row and give a line break otherwise all stars
+        // would get printed in 1 line.
+        cout << endl;
+    }
+}
+
+int main()
+{   
+    // Here, we have taken the value of N as 5.
+    // We can also take input from the user.
+    int N = 5;
+
+    pattern7(N);
+
+    return 0;
+}
+```
+
+-----------------  
+
+
+![image](https://github.com/user-attachments/assets/96522df6-2f16-4e4b-9e0c-b3615f78f696)  
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+void pattern8(int N)
+{
+    // This is the outer loop which will loop for the rows.
+    for (int i = 0; i < N; i++)
+    {
+        // For printing the spaces before stars in each row
+        for (int j =0; j<i; j++)
+        {
+            cout <<" ";
+        }
+       
+        // For printing the stars in each row
+        for(int j=0;j< 2*N -(2*i +1);j++){
+            
+            cout<<"*";
+        }
+        
+        // For printing the spaces after the stars in each row
+         for (int j =0; j<i; j++)
+        {
+            cout <<" ";
+        }
+        
+        // As soon as the stars for each iteration are printed, we move to the
+        // next row and give a line break otherwise all stars
+        // would get printed in 1 line.
+        cout << endl;
+    }
+}
+
+int main()
+{   
+    // Here, we have taken the value of N as 5.
+    // We can also take input from the user.
+    int N = 5;
+
+    pattern8(N);
+
+    return 0;
+}
+```
+-------------------  
+
+![image](https://github.com/user-attachments/assets/159f9207-ff52-4ac1-a583-e78de88c72dd)  
+
+``c++
+#include <bits/stdc++.h>
+using namespace std;
+
+void erect_pyramid(int N)
+{
+    // This is the outer loop which will loop for the rows.
+    for (int i = 0; i < N; i++)
+    {
+        // For printing the spaces before stars in each row
+        for (int j =0; j<N-i-1; j++)
+        {
+            cout <<" ";
+        }
+       
+        // For printing the stars in each row
+        for(int j=0;j< 2*i+1;j++){
+            
+            cout<<"*";
+        }
+        
+        // For printing the spaces after the stars in each row
+         for (int j =0; j<N-i-1; j++)
+        {
+            cout <<" ";
+        }
+        
+        // As soon as the stars for each iteration are printed, we move to the
+        // next row and give a line break otherwise all stars
+        // would get printed in 1 line.
+        cout << endl;
+    }
+}
+
+void inverted_pyramid(int N)
+{
+    // This is the outer loop which will loop for the rows.
+    for (int i = 0; i < N; i++)
+    {
+        // For printing the spaces before stars in each row
+        for (int j =0; j<i; j++)
+        {
+            cout <<" ";
+        }
+       
+        // For printing the stars in each row
+        for(int j=0;j< 2*N -(2*i +1);j++){
+            
+            cout<<"*";
+        }
+        
+        // For printing the spaces after the stars in each row
+         for (int j =0; j<i; j++)
+        {
+            cout <<" ";
+        }
+        
+        // As soon as the stars for each iteration are printed, we move to the
+        // next row and give a line break otherwise all stars
+        // would get printed in 1 line.
+        cout << endl;
+    }
+}
+
+int main()
+{   
+    // Here, we have taken the value of N as 5.
+    // We can also take input from the user.
+    int N = 5;
+    erect_pyramid(N);
+    inverted_pyramid(N);
+
+    return 0;
+}
+```
 
 
 
