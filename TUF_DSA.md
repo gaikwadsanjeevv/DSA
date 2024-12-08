@@ -704,7 +704,7 @@ int main()
 
 ![image](https://github.com/user-attachments/assets/159f9207-ff52-4ac1-a583-e78de88c72dd)  
 
-``c++
+```c++
 #include <bits/stdc++.h>
 using namespace std;
 
