@@ -174,9 +174,12 @@ case 1:
 
 default:
 cout << "Invalid ";
-//no need of break here
 }
 }
+//When break is NOT Needed  
+If default is the last case in the switch, adding a break is technically unnecessary because there are no further cases to "fall through" to. For example:  
+// When break IS Needed  
+If the default case is not the last one, omitting break can cause fall-through to subsequent cases, leading to unintended behavior. For example:  
 ```
 #### ARRAY  
 ```c++
@@ -800,11 +803,81 @@ int main()
     return 0;
 }
 ```
+------------------------------------  
 
+#### STL C++ -  Standard Templete Library:  
 
+C++ STL divided in to 4 parts:   
+ALgorithm  
+Containers  
+Functions  
+Iterators  
 
+Before moving to containers we need to know about pairs - Pairs is a part of utility library.  
 
+```c++
+//storing 2 inputs in pairs
+void explainPain() {
+pair <int, int> p = {1,3};
+cout << p.first << " " << p.second;
 
+//storing 3 number
+pair<int, pair<int, int>> p = {1,{3,4}};
+cout<< p.first << " " << p.second.second << " " << p.second.first;
+//pair array
+pair<int, int> arr[] = {{1,2},{2,5}, {5,1}};
+cout<< arr[1].second;
+ }
+```
+Vector is the container dynamic in nature  
+ 
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+// emplace_back is more efficient than push_back when dealing with complex objects because 
+// it eliminates the need for a temporary object and a copy or move operation.
+void explainVector() {
+    vector<int> v;
+
+    // Adding elements to a vector of integers
+    v.push_back(1);        // Adds 1 to the vector using push_back
+    v.emplace_back(2);     // Adds 2 to the vector using emplace_back (slightly more efficient)
+
+    // Vector of pairs
+    vector<pair<int, int>> vec;
+
+    // Adding elements to a vector of pairs
+    vec.push_back({1, 2});        // Requires constructing a temporary pair {1, 2}
+    vec.emplace_back(1, 2);       // Constructs the pair directly in place (more efficient)
+
+    // Print the vector of integers
+    cout << "Vector of integers: ";
+    for (auto val : v) {
+        cout << val << " ";
+    }
+    cout << endl;
+
+    // Print the vector of pairs
+    cout << "Vector of pairs: ";
+    for (auto &p : vec) {
+        cout << "{" << p.first << ", " << p.second << "} ";
+    }
+    cout << endl;
+}
+
+int main() {
+    explainVector();  // Call the function to demonstrate the usage
+    return 0;
+}
+```
+Other ways to put element in vector :  
+
+vector<int> v(5. 100);   //vector of size 5, with values 100  
+vector<int> v(5);  //vector of size 5, with 5 instances of garbage value  
+vector<int> v2(v1);  
+//even if u are predefining the size of the vector you can anytime dynamically increase it  
+//ways to access the elements of an vector is by providing it indices, other way is by iterator.  
 
 
 
