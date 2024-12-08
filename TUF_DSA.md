@@ -337,4 +337,64 @@ int main() {
     return 0;
 }
 ```
-1:15
+Pass by value  
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+//pass by value - making copy of original and made changes.
+
+void doSomething(string s) {
+    s[0] = 't';
+    cout << s << endl;
+}
+int main() {
+string s = "raj";
+doSomething(s);
+cout<< s << endl;
+return 0;
+}
+```
+Pass by reference  
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+//pass by reference - put &
+
+void doSomething(string &s) {
+    s[0] = 't';
+    cout << s << endl;
+}
+int main() {
+string s = "raj";
+doSomething(s);
+cout<< s << endl;
+return 0;
+}
+```
+But for array no need to put &  
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+void doSomething(int arr[], int n) {
+    arr[0] += 100;
+    cout << "Value inside function: " << arr[0] << endl;
+}
+int main() {
+    int n = 5;
+    int arr[n];
+
+    for(int i = 0; i < n ; i = i + 1) {
+        cin >> arr[i];
+    }
+    doSomething(arr, n);
+cout << "value inside int main: " << arr[0] << endl;
+return 0;
+}
+```
+
+
