@@ -396,5 +396,25 @@ cout << "value inside int main: " << arr[0] << endl;
 return 0;
 }
 ```
+========================================================
+Time complexity basically helps to judge different codes and also helps to decide which code is better.  
+in real life, Time complexity does not refer to the time taken by the machine to execute a particular code.  
+the time taken by a machine can be changed depending on the configuration. That is why we should not compare the two different codes on the basis of the time taken by a machine as the time is dependent on it.  
+
+The rate at which the time, required to run a code, changes with respect to the input size, is considered the time complexity. Basically, the time complexity of a particular code depends on the given input size, not on the machine used to run the code.  
+
+we are not going to use the standard units like minutes or seconds, but the Big O notation.  
+We will always calculate the time complexity for the worst-case scenario.  
+We will avoid including the constant terms.  
+We will also avoid the lower values. 
+
+==========================================================  
+Pattern problems  
+
+![image](https://github.com/user-attachments/assets/0bcf9c83-effc-454e-9680-bbd4829221d0)
+
+
+
+
 
 
