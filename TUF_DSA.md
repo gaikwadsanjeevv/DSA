@@ -125,4 +125,216 @@ else {
     return 0;
 }
 ```
+Switch  
+```C++
+#include<bits/stdc++.h>
+using namespace std;
 
+int main() {
+int day;
+cin >> day;
+
+switch (day)
+{
+case 1:
+    cout << "Monday";
+    break;
+    case 2:
+    cout << "Tuesday";
+    break;
+    case 3:
+    cout << "Wednesday";
+    break;
+    case 4:
+    cout << "Thrusday";
+    break;
+    case 5:
+    cout << "Friday";
+    break;
+
+default:
+cout << "Invalid ";
+//no need of break here
+}
+}
+```
+ARRAY  
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int arr[5];
+
+    // Input 5 integers into the array
+    cout << "Enter 5 integers: ";
+    cin >> arr[0] >> arr[1] >> arr[2] >> arr[3] >> arr[4];
+
+    // Modify the 4th element
+    arr[3] = 16;
+
+    // Loop through the array and print each element
+    cout << "Array elements: ";
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+```
+String also stores every character at index because string is storing characters within  
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  string s = "Striver";
+  cout << s[2];
+
+    return 0;
+}
+
+```
+For Loop  
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    for(int i = 1; i <= 25; i = i + 5 ) {
+        cout << "Strive " << i<< endl;
+    }
+    return 0;
+}
+
+```
+While loop  
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int i = 0; // Initialize 'i' to 0
+
+    while (i <= 5) {
+        cout << "Sanjeev " << i << endl;
+        i = i + 1; // Increment 'i' to avoid an infinite loop
+    }
+
+    return 0;
+}
+```
+Do while :  I want atleast one time the loop to execute if the condition is false:  
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i = 6; // Initialize the counter
+
+    // Start the do-while loop
+    do {
+        cout << "Number: " << i << endl; // Print the current number
+        i++; // Increment the counter
+    } while (i <= 5); // Condition to repeat the loop
+
+    return 0;
+}
+```
+Functions  
+```c++
+#include <iostream>
+using namespace std;
+//Functions are set of code which perform some task.
+//Functions are used to modularise code, increase readability, can be used multiple time, 
+//void
+
+void printName() {
+    cout << "Hey sanjeev";
+}
+int main() {
+printName();
+    return 0;
+}
+
+``
+Parameterized function
+```c++
+#include <iostream>
+using namespace std;
+//Functions are set of code which perform some task.
+//Functions are used to modularise code, increase readability, can be used multiple time, 
+//void
+
+void printName(string name) {
+    cout << "Hey " << name;
+}
+int main() {
+string name;
+cin >> name;
+printName(name);
+
+string name2;
+cin >> name2;
+printName(name2);
+return 0;
+}
+```
+Sum of numbers  
+```c++
+#include <iostream>
+using namespace std;
+
+// Function to calculate the sum of two numbers
+int sum(int num1, int num2) {
+    int num3 = num1 + num2; // Calculate the sum
+    return num3;           // Return the sum
+}
+
+int main() {
+    int num1, num2;
+
+    // Input two numbers
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    // Call the sum function and store the result
+    int result = sum(num1, num2);
+
+    // Display the result
+    cout << "The sum is: " << result << endl;
+
+    return 0;
+}
+```
+Always Ensuring the function always return a value  
+```c++
+#include <iostream>
+using namespace std;
+
+// Function to find the maximum of two numbers
+int maxx(int num1, int num2) {
+    if (num1 >= num2) {
+        return num1;
+    }
+    return num2; // Ensures the function always returns a value
+}
+
+int main() {
+    int num1, num2;
+
+    // Input two numbers
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    // Call the maxx function and store the result
+    int result = maxx(num1, num2);
+
+    // Display the maximum value
+    cout << "The maximum number is: " << result << endl;
+
+    return 0;
+}
+```
+1:15
