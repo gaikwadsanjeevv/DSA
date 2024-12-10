@@ -805,79 +805,31 @@ int main()
 ```
 ------------------------------------  
 
-#### STL C++ -  Standard Templete Library:  
+## Basic Maths  
+When ever we do % Modulo 10 we get the last digit.   
 
-C++ STL divided in to 4 parts:   
-ALgorithm  
-Containers  
-Functions  
-Iterators  
+Pseudo code :  
 
-Before moving to containers we need to know about pairs - Pairs is a part of utility library.  
-
-```c++
-//storing 2 inputs in pairs
-void explainPain() {
-pair <int, int> p = {1,3};
-cout << p.first << " " << p.second;
-
-//storing 3 number
-pair<int, pair<int, int>> p = {1,{3,4}};
-cout<< p.first << " " << p.second.second << " " << p.second.first;
-//pair array
-pair<int, int> arr[] = {{1,2},{2,5}, {5,1}};
-cout<< arr[1].second;
- }
-```
-Vector is the container dynamic in nature  
- 
-```c++
-#include <bits/stdc++.h>
-using namespace std;
-
-// emplace_back is more efficient than push_back when dealing with complex objects because 
-// it eliminates the need for a temporary object and a copy or move operation.
-void explainVector() {
-    vector<int> v;
-
-    // Adding elements to a vector of integers
-    v.push_back(1);        // Adds 1 to the vector using push_back
-    v.emplace_back(2);     // Adds 2 to the vector using emplace_back (slightly more efficient)
-
-    // Vector of pairs
-    vector<pair<int, int>> vec;
-
-    // Adding elements to a vector of pairs
-    vec.push_back({1, 2});        // Requires constructing a temporary pair {1, 2}
-    vec.emplace_back(1, 2);       // Constructs the pair directly in place (more efficient)
-
-    // Print the vector of integers
-    cout << "Vector of integers: ";
-    for (auto val : v) {
-        cout << val << " ";
-    }
-    cout << endl;
-
-    // Print the vector of pairs
-    cout << "Vector of pairs: ";
-    for (auto &p : vec) {
-        cout << "{" << p.first << ", " << p.second << "} ";
-    }
-    cout << endl;
+while(N > 0) 
+{
+lastDigit = N % 10;
+N = N/ 10;
 }
-
-int main() {
-    explainVector();  // Call the function to demonstrate the usage
-    return 0;
+** so the number of time the given number is divisible by 10 = number of digits it has.  
+#### Count The number of digits : 
+```java
+class Solution {
+    static int evenlyDivides(int n) {
+        int ctn = 0;
+        // Loop until the number becomes 0
+        while (n > 0) {
+            ctn++;
+            n = n / 10; // Remove the last digit
+        }
+        return ctn;
+    }
 }
 ```
-Other ways to put element in vector :  
-
-vector<int> v(5. 100);   //vector of size 5, with values 100  
-vector<int> v(5);  //vector of size 5, with 5 instances of garbage value  
-vector<int> v2(v1);  
-//even if u are predefining the size of the vector you can anytime dynamically increase it  
-//ways to access the elements of an vector is by providing it indices, other way is by iterator.  
 
 
 
