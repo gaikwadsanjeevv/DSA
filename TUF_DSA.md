@@ -1146,7 +1146,8 @@ return 0;
 }
 ```
 We hear one more concept Recursion Tree:  
-![image](https://github.com/user-attachments/assets/f90b80fc-04fc-4f4c-802f-175caf143998)  
+![image](https://github.com/user-attachments/assets/ac79beb5-b0f9-4bce-862c-acc924be373a)
+ 
 
 
 
