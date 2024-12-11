@@ -898,7 +898,211 @@ so lets do looping
 
 
 
+![image](https://github.com/user-attachments/assets/d23a83b8-e9f9-4e44-9cff-21b9b03d75ed)
+Here while finding factors we can see in the image the square root of number forms the mid line and then factors above line is replica below so to optimize code let take one above part of code to get all factors.  
 
+```java
+pseudo code
+for(i = 1; i < sqrt(n); i++) //here sqrt is function so its called in every step u can write there i * i <=n  
+{
+if(n%i == 0)
+{
+print(i)
+if((n/j)! = i)
+print(n/i)
+```
+#### Checking the number is prime or not  
+
+```java
+//Brute force
+public class Main {
+    // Function to check if a
+    // given number is prime.
+    static boolean checkPrime(int n) {
+        // Initialize a counter variable to
+        // count the number of factors.
+        int cnt = 0;
+        // Loop through numbers from 1 to n.
+        for (int i = 1; i <= n; i++) {
+            // If n is divisible by i
+            // without any remainder.
+            if (n % i == 0) {
+                // Increment the counter.
+                cnt = cnt + 1;
+            }
+        }
+
+        // If the number of
+        // factors is exactly 2
+        if (cnt == 2) {
+            // Return true, indicating
+            // that the number is prime.
+            return true;
+        }
+        // If the number of
+        // factors is not 2.
+        else {
+            // Return false, indicating
+            // that the number is not prime.
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 1483;
+        boolean isPrime = checkPrime(n);
+        if (isPrime) {
+            System.out.println(n + " is a prime number.");
+        } else {
+            System.out.println(n + " is not a prime number.");
+        }
+    }
+}
+```
+Optimal Method
+![image](https://github.com/user-attachments/assets/8e12f8fd-5d1e-4121-804a-f162ea655ddf)  
+```java
+//optimal approach
+import java.util.*;
+
+public class Main {
+
+    // Function to check if a
+    // given number is prime.
+    static boolean checkPrime(int n){ 
+
+        // Initialize a counter variable to
+        // count the number of factors.
+        int cnt = 0;
+
+        // Loop through numbers from 1
+        // to the square root of n.
+        for(int i = 1; i <= Math.sqrt(n); i++){   //more better is for(int i = 1; i*i <= n; i++)  
+
+            // If n is divisible by i
+            // without any remainder.
+            if(n % i == 0){ 
+
+                // Increment the counter.
+                cnt = cnt + 1;
+
+                // If n is not a perfect square,
+                // count its reciprocal factor.
+                if(n / i != i){
+                    cnt = cnt + 1;
+                }
+            }
+        }
+
+        // If the number of
+        // factors is exactly 2.
+        if(cnt == 2){
+             // Return true, indicating
+             // that the number is prime.
+            return true;
+        }
+        // If the number of
+        // factors is not 2.
+        else{ 
+            // Return false, indicating
+            // that the number is not prime.
+            return false; 
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 1483;
+        boolean isPrime = checkPrime(n);
+        if(isPrime){
+            System.out.println(n + " is a prime number.");
+        } else {
+            System.out.println(n + " is not a prime number.");
+        }
+    }
+}
+```
+Find GCD of two numbers  
+Problem Statement: Given two integers N1 and N2, find their greatest common divisor.  
+The Greatest Common Divisor of any two integers is the largest number that divides both integers.  
+ 
+```java
+public class Main {
+    public static int findGcd(int n1, int n2) {
+        // Initialize gcd to 1
+        int gcd = 1;
+
+        // Iterate from 1 up to
+        // the minimum of n1 and n2
+        for (int i = 1; i <= Math.min(n1, n2); i++) {
+            // Check if i is a common
+            // factor of both n1 and n2
+            if (n1 % i == 0 && n2 % i == 0) {
+                // Update gcd to the
+                // current common factor i
+                gcd = i;
+            }
+        }
+
+        // Return the greatest
+        // common divisor (gcd)
+        return gcd;
+    }
+
+    public static void main(String[] args) {
+        int n1 = 20, n2 = 15;
+
+        // Find the GCD of n1 and n2
+        int gcd = findGcd(n1, n2);
+
+        System.out.println("GCD of " + n1 + " and " + n2 + " is: " + gcd);
+    }
+}
+  Time Complexity: O(min(N1, N2))                          
+```
+#### Better Approach 
+```java
+public class Main {
+    // Continue loop as long as both
+    // a and b are greater than 0
+    public static int findGcd(int a, int b) {
+        while(a > 0 && b > 0) {
+            // If a is greater than b,
+            // subtract b from a and update a
+            if(a > b) {
+                // Update a to the remainder
+                // of a divided by b
+                a = a % b;
+            }
+            // If b is greater than or equal
+            // to a, subtract a from b and update b
+            else {
+                // Update b to the remainder
+                // of b divided by a
+                b = b % a;
+            }
+        }
+        // Check if a becomes 0,
+        // if so, return b as the GCD
+        if(a == 0) {
+            return b;
+        }
+        // If a is not 0,
+        // return a as the GCD
+        return a;
+    }
+
+    public static void main(String[] args) {
+        int n1 = 20, n2 = 15;
+
+        // Find the GCD of n1 and n2
+        int gcd = findGcd(n1, n2);
+
+        System.out.println("GCD of " + n1 + " and " + n2 + " is: " + gcd);
+    }
+}
+    
+
+```
 
 
 
