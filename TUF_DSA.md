@@ -1109,6 +1109,47 @@ when  a function calls itself  until a specified condition is meet.
 ![digital_flowchart](https://github.com/user-attachments/assets/39867a87-0f90-4d61-8d16-5cfd68c8dce9)  
 If u look the image above there is function with in function calling itself.  
 
+```c++
+#include <stdio.h>
+
+// Function f definition
+void f() {
+    printf("1\n"); // Print 1
+    f();           // Recursive call to f()
+}
+
+// Main function
+int main() {
+    f(); // Call f() from main
+    return 0;
+}
+```
+when the function keeps calling up recursively the stack get overfilled leading to segmentation fault also called as StackOverflow.  
+As the fuction keep calling recursively so it must stop somewhere, which we call as the base condition. There can be single or multiple base condition.  
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int cnt = 0;
+void print() {
+    if(cnt == 3) return;
+cout << cnt << endl;
+cnt++;
+print();
+}
+
+int main() {
+
+print();
+return 0;
+
+}
+```
+We hear one more concept Recursion Tree:  
+![image](https://github.com/user-attachments/assets/f90b80fc-04fc-4f4c-802f-175caf143998)  
+
+
+
 
 
 
