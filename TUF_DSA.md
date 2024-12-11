@@ -1103,7 +1103,11 @@ public class Main {
     
 
 ```
+#### Recursions  
 
+when  a function calls itself  until a specified condition is meet.
+![digital_flowchart](https://github.com/user-attachments/assets/39867a87-0f90-4d61-8d16-5cfd68c8dce9)  
+If u look the image above there is function with in function calling itself.  
 
 
 
