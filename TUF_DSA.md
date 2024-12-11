@@ -830,7 +830,66 @@ class Solution {
     }
 }
 ```
+#### Palindrome number
+```java
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        int revNum = 0;
+        int dup = n; // store original number
+        
+        while (n > 0) {
+            int ld = n % 10; // get last digit
+            revNum = (revNum * 10) + ld; // construct reversed number
+            n = n / 10; // reduce number
+        }
+        
+        if (dup == revNum) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+        
+        sc.close();
+    }
+}
+
+```
+#### Armstrong Numbers: 
+```java
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        int originalNum = n; // Store the original number for comparison
+        int sum = 0;
+
+        while (n > 0) {
+            int ld = n % 10; // Get the last digit
+            sum += ld * ld * ld; // Add the cube of the last digit to sum
+            n = n / 10; // Remove the last digit
+        }
+
+        // Compare the original number with the sum of cubes of digits
+        if (originalNum == sum) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+        
+        sc.close();
+    }
+}
+
+```
 
 
 
