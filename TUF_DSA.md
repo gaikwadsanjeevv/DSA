@@ -890,6 +890,9 @@ public class Main {
 }
 
 ```
+#### Print all divisors  
+The divisors of any number are always between 1 to N.  
+so lets do looping  
 
 
 
