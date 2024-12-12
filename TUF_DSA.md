@@ -1210,6 +1210,14 @@ Use Case: When the task requires processing elements in reverse order or using r
 ![image](https://github.com/user-attachments/assets/02f142d1-895b-4c35-ad80-80950cc06835)  
 ![image](https://github.com/user-attachments/assets/6200caf2-3e2f-4b00-bfc5-aa533182158a)  
 
+Forward tracking is suitable when the solution is built progressively, step by step, without needing to backtrack or reconsider earlier steps.  
+It works for tasks that are deterministic, such as rendering a game's visuals (e.g., updating the snake's position in the snake game) or exploring possibilities in a depth-first manner.  
+
+Backtracking is critical in solving puzzles like mazes, Sudoku, or any problem involving a "trial-and-error" approach. It explores a path and "backs up" if the path fails.  
+Backtracking is used to find solutions when constraints need to be satisfied or when the problem space requires exploration and pruning.  
+Example in a Maze Solver:
+
+You move step by step (forward tracking) until you hit a dead end. Then, backtracking kicks in to reverse the last step and try alternative paths.  
 
 
 
