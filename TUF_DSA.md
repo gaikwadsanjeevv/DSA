@@ -1146,8 +1146,72 @@ return 0;
 }
 ```
 We hear one more concept Recursion Tree:  
+A recursive tree is basically a representative form of recursion which depicts how functions are called and returned as a series of events happening consecutively. It is a pictorial description of the process of recursion as illustrated below :   
 ![image](https://github.com/user-attachments/assets/ac79beb5-b0f9-4bce-862c-acc924be373a)
  
+####  Basic recursion function with base condition.  
+```java
+class Basic {
+    static int cnt = 0;
+    static void print(){
+        
+         // Base Condition.
+         if(cnt == 3 ) return;
+         System.out.println(cnt);
+
+         // Count incremented.
+         cnt = cnt+1;
+         print();
+
+    }
+    public static void main(String[] args) {
+        print();
+    }
+}
+```
+#### Print your Name N times using recursion  
+```java
+class Recursion {
+    
+    static void func(int i, int n){
+        
+            // Base Condition.
+            if(i>n) return;
+            System.out.println("Sanju "+i);
+
+            // Function call to print till i increments.
+            func(i+1,n);
+
+    }
+    public static void main(String[] args) {
+
+       // Here, let’s take the value of n to be 4.
+       int n = 25;
+       func(1,n);
+    }
+}
+```
+Time Complexity: O(N) { Since the function is being called n times, and for each function, we have only one printable line that takes O(1) time, so the cumulative time complexity would be O(N)  
+
+#### Print 1 to N using Recursion  
+
+Forward Tracking:  
+
+In forward tracking, the logic or operation (e.g., System.out.println(i)) is executed before the recursive call.  
+The recursive calls are made first, progressively reaching the base condition. The logic unfolds as the function stack grows.  
+Use Case: When the task requires processing elements while "going deeper" into recursion, such as printing or accumulating values in a forward sequence.  
+
+Backward Tracking  
+
+In backward tracking, the recursive call is made before the logic or operation.  
+This means the logic unfolds as the recursion stack starts "unwinding" after reaching the base condition.  
+Use Case: When the task requires processing elements in reverse order or using results obtained from deeper recursive calls, such as calculating factorials or backtracking algorithms.  
+
+![image](https://github.com/user-attachments/assets/02f142d1-895b-4c35-ad80-80950cc06835)  
+![image](https://github.com/user-attachments/assets/6200caf2-3e2f-4b00-bfc5-aa533182158a)  
+
+
+
 
 
 
