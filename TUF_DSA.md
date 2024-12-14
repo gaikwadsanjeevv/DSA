@@ -1422,6 +1422,13 @@ Optimization: Many languages optimize tail-recursive functions by avoiding addit
 Non-Tail Recursive Version  
 In non-tail recursion, the recursive call is not the last operation in the function. The function typically performs additional operations after the recursive call.  
 
+![image](https://github.com/user-attachments/assets/f46390d0-9ba2-4421-b2d8-87f664788384)  
+![image](https://github.com/user-attachments/assets/f350c68a-de70-4f31-926c-155b9053654f)  
+![image](https://github.com/user-attachments/assets/6e2cb920-6107-47db-bf60-9e48e77a867a)  
+
+
+
+
 
 
 
