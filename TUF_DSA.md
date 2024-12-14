@@ -1219,11 +1219,114 @@ Example in a Maze Solver:
 
 You move step by step (forward tracking) until you hit a dead end. Then, backtracking kicks in to reverse the last step and try alternative paths.  
 
+##### Sum of first N natural numbers  
+```java
+//using loop
+import java.util.*;
 
+public class tuf {
 
+  public static void main(String[] args) {
 
+    solve(5);
+    solve(6);
+  }
+  public static void solve(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+      sum += i;
+    }
+    System.out.println("The sum of the first " + n + " numbers is: " + sum);
+  }
+}
+//Time Complexity: O(N)
 
+//Space Complexity: O(1)
+```
+#### Solution 2: Using the formula
+```java
+import java.util.*;
 
+public class tuf {
+
+  public static void main(String[] args) {
+
+    solve(5);
+    solve(6);
+  }
+  public static void solve(int N) {
+    int sum = N * (N + 1) / 2;
+    System.out.println("The sum of the first " + N + " numbers is: " + sum);
+  }
+}
+Time Complexity: O(1)
+
+Space Complexity: O(1)
+```
+#### Recursive way of calculating the sum of first N Natural Numbers:
+
+Backtracking involves exploring all possible solutions to a problem and "backtracking" to try other possibilities if a certain solution path does not work. Typical backtracking problems include finding permutations, solving mazes, or generating subsets.  
+This code does not explore multiple paths or revert decisions. Instead, it follows a single, linear recursive path to compute the sum.  
+The error for large values like 98765 occurs because Java recursion has a limit on the stack depth. By default, Java's stack size is limited, and recursive calls consume stack memory for each function call. When the stack depth exceeds the allocated size, a StackOverflowError is thrown.  
+
+```java
+class Recursion {
+    
+    static void func(int i, int sum){
+        
+            // Base Condition.
+            if(i<1){
+                
+                System.out.println(sum);
+                return;
+            }
+            
+            // Function call to increment sum by i till i decrements to 1.
+            func(i-1,sum+i);
+            
+
+    }
+    public static void main(String[] args) {
+
+       // Here, let’s take the value of n to be 3.
+       int n = 3;
+       func(n,0);
+    }
+}
+Time Complexity: O(N) { Since the function is being called n times, and for each function, we have only one printable line that takes O(1) time, so the cumulative time complexity would be O(N) }
+
+Space Complexity: O(N) { In the worst case, the recursion stack space would be full with all the function calls waiting to get completed and that would make it an O(N) recursion stack space }.
+```
+#### 2. Functional way
+
+This approach is a lot simpler than the parameterized recursion. We can visualize the sum of n natural numbers in the following way as shown below:
+```java
+class Recursion {
+    
+    static int func(int n){
+        
+            // Base Condition.
+            if(n == 0){
+                
+                return 0;
+            }
+            
+            // Problem broken down into 2 parts and then combined.
+            return n + func(n-1);
+            
+
+    }
+    public static void main(String[] args) {
+
+       // Here, let’s take the value of n to be 3.
+       int n = 3;
+       System.out.println(func(n));
+    }
+}
+Time Complexity: O(N) { Since the function is being called n times, and for each function, we have only one printable line that takes O(1) time, so the cumulative time complexity would be O(N) }
+
+Space Complexity: O(N) { In the worst case, the recursion stack space would be full with all the function calls waiting to get completed and that would make it an O(N) recursion stack space }.
+```
 
 
 
