@@ -1426,6 +1426,34 @@ In non-tail recursion, the recursive call is not the last operation in the funct
 ![image](https://github.com/user-attachments/assets/f350c68a-de70-4f31-926c-155b9053654f)  
 ![image](https://github.com/user-attachments/assets/6e2cb920-6107-47db-bf60-9e48e77a867a)  
 
+![image](https://github.com/user-attachments/assets/d672c432-0843-4fc3-9a16-67340909b3d4)  
+
+#### Iterative Alternative (Simulating Tail Recursion in Java)  
+```java
+class IterativeFactorial {
+
+    // Iterative approach to calculate factorial
+    static long factorial(int n) {
+        long result = 1;
+
+        for (int i = 1; i <= n; i++) {
+            result *= i; // Accumulate the result iteratively
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        System.out.println("Factorial of " + n + " is: " + factorial(n)); // Output: 120
+    }
+}
+```
+![image](https://github.com/user-attachments/assets/3d59390f-4e99-47fd-8704-6c150c441247)  
+![image](https://github.com/user-attachments/assets/0a6c33bc-23e0-4f7e-bd4f-b7d3d4d13ca8)  
+
+![image](https://github.com/user-attachments/assets/a3a17a67-b84e-4d32-9416-019a0d4a8045)  
+
 
 
 
