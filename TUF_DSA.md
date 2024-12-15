@@ -1815,3 +1815,18 @@ Time Complexity: O(2^N) { This problem involves two function calls for each iter
 
 Space Complexity: O(N) { At maximum there could be N function calls waiting in the recursion stack since we need to calculate the Nth Fibonacci number for which we also need to calculate (N-1) Fibonacci numbers before it }.
 ```
+#### Hashing :   
+Let’s first try to understand the importance of hashing using an example:
+
+Given an array of integers: [1, 2, 1, 3, 2] and we are given some queries: [1, 3, 4, 2, 10]. For each query, we need to find out how many times the number appears in the array. For example, if the query is 1 our answer would be 2, and if the query is 4 the answer will be 0. 
+
+Similarly, the following will be the answers to the given queries:  
+Brute Force approach:  
+As we have learned the ‘for loop’, the first approach that should come to our mind is to use it to solve this problem. For each query, we will iterate over the array using a loop. We will count the number of times the query number appears in that array i.e. increment the counter variable if the array element at that index equals the query number. In terms of function, it will look like the following:  
+![image](https://github.com/user-attachments/assets/b435ff0f-f81b-4654-ab39-b3c738be3fe7)  
+10^8 operations take 1 second to get executed.  
+In order to optimize this approach, we need to use hashing. If we say the definition of hashing in a naive way, it is nothing but the combination of the steps, pre-storing, and fetching.  
+![image](https://github.com/user-attachments/assets/06f49d40-1557-4226-b286-ac0e112d2747)  
+
+
+
