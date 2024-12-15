@@ -1,3 +1,6 @@
+## @ https://takeuforward.org/ Notes for DSA, Thory and Problems for Leetcode  
+## ⓒ TakeUForward : Raj VikramadityaRaj Vikramaditya Sir  
+
 ### Basics C++  
 #### Basic Skeleton of Programme  
 ```C++
