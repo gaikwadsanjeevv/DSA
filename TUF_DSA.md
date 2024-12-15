@@ -1453,13 +1453,362 @@ class IterativeFactorial {
 ![image](https://github.com/user-attachments/assets/0a6c33bc-23e0-4f7e-bd4f-b7d3d4d13ca8)  
 
 ![image](https://github.com/user-attachments/assets/a3a17a67-b84e-4d32-9416-019a0d4a8045)  
+![image](https://github.com/user-attachments/assets/bc56c050-5787-423f-98fb-114b33c9b7b8)  
 
+![image](https://github.com/user-attachments/assets/fc6d3b87-94bb-4244-abb8-2455f3bff27b)  
 
+### Factorial of a number :  Iterative and Recursive.
 
+```java
+public class Main {
+   static int factorial(int X) {
+      int ans = 1;
+      for (int i = 1; i <= X; i++) {
+         ans = ans * i;
+      }
+      return ans;
+   }
+   public static void main(String[] args) {
 
+      int X = 5;
+      int result = factorial(X);
+      System.out.println("The factorial of " + X + " is " + result);
+   }
+}
+Time Complexity: O(n)
 
+Space Complexity: O(1) 
+```
+#### Solution 2: Recursive  
 
+Recursive way of calculating the factorial of first N Numbers (functional way):  
+```java
+import java.util.Scanner;
 
+class FactorialRecursion {
 
+    // Recursive method to calculate factorial
+    static int factorial(int n) {
+        // Base case: factorial of 0 is 1
+        if (n == 0) {
+            return 1;
+        }
+        
+        // Recursive case: n * factorial(n-1)
+        return n * factorial(n - 1);
+    }
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        // Input the number from the user
+        System.out.print("Enter a number: ");
+        int n = scanner.nextInt();
+
+        // Calculate factorial using recursion
+        int result = factorial(n);
+
+        // Output the result
+        System.out.println("Factorial of " + n + " is: " + result);
+
+        scanner.close();
+    }
+}
+```
+#### Reverse a given Array  
+```java
+public class Main {
+   //Function to print array
+   static void printArray(int ans[], int n) {
+      System.out.print("Reversed array is:- \n");
+      for (int i = 0; i < n; i++) {
+         System.out.print(ans[i] + " ");
+      }
+   }
+   //Function to reverse array using an auxiliary array
+   static void reverseArray(int arr[], int n) {
+      int[] ans = new int[n];
+      for (int i = n - 1; i >= 0; i--) {
+         ans[n - i - 1] = arr[i];
+      }
+      printArray(ans, n);
+   }
+   public static void main(String[] args) {
+      int n = 5;
+      int arr[] = { 5, 4, 3, 2, 1};
+      reverseArray(arr, n);
+   }
+}
+Time Complexity: O(n), single-pass for reversing array.
+
+Space Complexity: O(n), for the extra array used.
+```
+![image](https://github.com/user-attachments/assets/7c45450d-343a-4d03-92a4-723fa2fc5ad0)  
+![image](https://github.com/user-attachments/assets/19e895da-49b4-416f-9baf-6bdadc8b5fa6)  
+![image](https://github.com/user-attachments/assets/1e6def4f-3513-44bc-9c9d-3824f4219219)  
+
+```java
+public class Main {
+   //Function to print array
+   static void printArray(int arr[], int n) {
+      System.out.print("Reversed array is:- \n");
+      for (int i = 0; i < n; i++) {
+         System.out.print(arr[i] + " ");
+      }
+   }
+   //Function to reverse array 
+   static void reverseArray(int arr[], int n) {
+      int p1 = 0, p2 = n - 1;
+      while (p1 < p2) {
+         int tmp = arr[p1];
+         arr[p1] = arr[p2];
+         arr[p2] = tmp;
+         p1++;
+         p2--;
+      }
+      printArray(arr, n);
+   }
+   public static void main(String[] args) {
+      int n = 5;
+      int arr[] = { 5, 4, 3, 2, 1};
+      reverseArray(arr, n);
+
+   }
+}
+Time Complexity: O(n), single-pass involved.
+
+Space Complexity: O(1) 
+```
+![image](https://github.com/user-attachments/assets/c86fa7ff-f904-4448-ab56-ea2bfd0ef96e)  
+```java
+public class Main {
+   //Function to print array
+   static void printArray(int arr[], int n) {
+      System.out.print("Reversed array is:- \n");
+      for (int i = 0; i < n; i++) {
+         System.out.print(arr[i] + " ");
+      }
+   }
+   //Function to reverse array using recursion
+   static void reverseArray(int arr[], int start, int end) {
+      if (start < end) {
+         int tmp = arr[start];
+         arr[start] = arr[end];
+         arr[end] = tmp;
+         reverseArray(arr, start + 1, end - 1);
+      }
+   }
+   public static void main(String[] args) {
+      int n = 5;
+      int arr[] = { 5, 4, 3, 2, 1};
+      reverseArray(arr, 0, n - 1);
+      printArray(arr, n);
+   }
+}
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+```
+![image](https://github.com/user-attachments/assets/15e40636-e97a-465f-b784-1d645f43ce4c)  
+```java
+import java.util.*;
+public class Main {
+   //Function to print array
+   static void printArray(Integer arr[], int n) {
+      System.out.print("Reversed array is:- \n");
+      for (int i = 0; i < n; i++) {
+         System.out.print(arr[i] + " ");
+      }
+   }
+   //Reverse array using library function
+   static void reverseArray(Integer arr[]) {
+      //fetching array as list object
+      //reversing the fetched object
+      Collections.reverse(Arrays.asList(arr));
+   }
+   public static void main(String[] args) {
+      int n = 5;
+      Integer arr[] = {5,4,3,2,1};
+      reverseArray(arr);
+      printArray(arr, n);
+   }
+}
+Time Complexity: O(n)
+
+Space Complexity: O(1)
+
+```
+
+![image](https://github.com/user-attachments/assets/4eb28402-2f7b-4a21-8f4d-b88f73721249)  
+
+![image](https://github.com/user-attachments/assets/60e225f0-8b69-4465-957a-aea13216a593)  
+
+```java
+import java.io.*;
+import java.util.Arrays;
+class Test {
+  static private boolean isPalindrome(String s) {
+    int left = 0, right = s.length()-1;
+        while(left<right)
+        {
+            char l = s.charAt(left), r = s.charAt(right);
+            if(!Character.isLetterOrDigit(l)) 
+                left++;
+            else if(!Character.isLetterOrDigit(r)) 
+                right--;
+            else if(Character.toLowerCase(l)!=Character.toLowerCase(r)) 
+                return false;
+            else {
+                left++; 
+                right--;
+            }
+        }
+        return true;
+  }
+  public static void main(String[] args) {
+    String str = "ABCDCBA";
+    boolean ans = isPalindrome(str);
+
+    if (ans == true) {
+      System.out.println("Palindrome");
+    } else {
+      System.out.println("Not Palindrome");
+    }
+  }
+}
+Time Complexity:  O(N)
+
+Space Complexity: O(1)
+```
+
+![image](https://github.com/user-attachments/assets/de47afba-e04b-4032-8b67-98c33b62cd0a)  
+```java
+class Recursion {
+    
+    static boolean palindrome(int i, String s){
+        
+            // Base Condition
+            // If i exceeds half of the string, means all the elements 
+            // are compared, we return true.
+            if(i>=s.length()/2) return true;
+            
+            // If start is not equal to end, not palindrome.
+            if(s.charAt(i)!=s.charAt(s.length()-i-1)) return false;
+            
+            // If both characters are same, increment i and check start+1 and end-1.
+            return palindrome(i+1,s);
+            
+
+    }
+    public static void main(String[] args) {
+
+       // Example string.
+       String s = "madam";
+       System.out.println(palindrome(0,s));
+    }
+}
+Output:
+
+True
+
+Time Complexity: O(N) { Precisely, O(N/2) as we compare the elements N/2 times and swap them}.
+
+Space Complexity: O(1) { The elements of the given array are swapped in place so no extra space is required}.
+
+```
+![image](https://github.com/user-attachments/assets/c7423eb1-623f-4636-b4d5-d7f956f647b8)  
+
+![image](https://github.com/user-attachments/assets/c2f6e419-c149-4729-baf8-61e652681591)  
+```Java
+public class TUF {
+  public static void main(String args[]) {
+    int n = 5;
+    if (n == 0) {
+      System.out.println(0);
+    } else {
+      int fib[] = new int[n + 1];
+      fib[0] = 0;
+      fib[1] = 1;
+      for (int i = 2; i <= n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+      }
+      System.out.println("The Fibonacci Series up to "+n+"th term:");
+      for (int i = 0; i <= n; i++) {
+        System.out.print(fib[i] + " ");
+      }
+    }
+  }
+}
+Output:
+
+The Fibonacci Series up to 5th term:
+0 1 1 2 3 5
+
+Time Complexity: O(n)+O(n), for calculating and printing the Fibonacci series.
+Space Complexity: O(n), for storing Fibonacci series.
+```
+![image](https://github.com/user-attachments/assets/59e1c0c9-1628-486f-ae3e-2ee29d063c33)  
+```java
+public class TUF {
+  public static void main(String args[]) {
+    int n = 5;
+    if (n == 0) {
+    System.out.println("The Fibonacci Series up to "+n+"th term:");
+    System.out.print(0);
+    } else {
+      int secondLast = 0;
+      int last = 1;
+      System.out.println("The Fibonacci Series up to "+n+"th term:");
+      System.out.print(secondLast + " " + last + " ");
+      int cur;
+      for (int i = 2; i <= n; i++) {
+        cur = last + secondLast;
+        secondLast = last;
+        last = cur;
+        System.out.print(cur + " ");
+      }
+    }
+  }
+}
+Output:
+
+The Fibonacci Series up to 5th term:
+0 1 1 2 3 5
+
+Time Complexity: O(N).As we are iterating over just one for a loop.
+
+Space Complexity: O(1).
+```
+![image](https://github.com/user-attachments/assets/2cc1f9a4-74a2-420e-a623-fab20613c4b2)  
+![image](https://github.com/user-attachments/assets/eda09109-b4dd-4997-8466-f77f2e7e6155)  
+```java
+class Recursion {
+    
+    static int fibonacci(int N){
+        
+            // Base Condition.
+            if(N <= 1){
+                
+                return N;
+            }
+            
+            // Problem broken down into 2 functional calls
+            // and their results combined and returned.
+            int last = fibonacci(N-1);
+            int slast = fibonacci(N-2);
+            
+            return last + slast;
+            
+
+    }
+    public static void main(String[] args) {
+
+       // Here, let’s take the value of N to be 4.
+       int N = 4;
+       System.out.println(fibonacci(N));
+    }
+}
+Time Complexity: O(2^N) { This problem involves two function calls for each iteration which further expands to 4 function calls and so on which makes worst-case time complexity to be exponential in nature }.
+
+Space Complexity: O(N) { At maximum there could be N function calls waiting in the recursion stack since we need to calculate the Nth Fibonacci number for which we also need to calculate (N-1) Fibonacci numbers before it }.
+```
