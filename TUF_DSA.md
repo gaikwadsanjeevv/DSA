@@ -1830,6 +1830,7 @@ In order to optimize this approach, we need to use hashing. If we say the defini
 
 
 #### Sorting :  
+##### Selection Sort:  
 <img width="614" alt="image" src="https://github.com/user-attachments/assets/8815a2fd-5d36-471d-9990-9aba4ce82715" />  
 
 The algorithm steps are as follows:  
@@ -1973,6 +1974,52 @@ public class tUf {
 TC: O(N)^2 for the wordst and average cases and O(N) for the best case
 SC: O(1)  
 ```
+
+#### Insertion Sort:  
+It takes an element and places in the correct order.  
+We take a group swap-swap till all sorted and increase one more element to again continue.  
+<img width="435" alt="image" src="https://github.com/user-attachments/assets/80c9fae6-0349-48c0-8e96-1c8f79f0a8e4" />  
+-I am running from index 1 to n and picking each element and compare so need to use for loop:  
+```java
+import java.util.*;
+
+public class Main {
+    static void insertion_sort(int[] arr, int n) {
+        for (int i = 0; i <= n - 1; i++) {
+            int j = i;
+            while (j > 0 && arr[j - 1] > arr[j]) {
+                int temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+                j--;
+            }
+        }
+
+        System.out.println("After insertion sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String args[]) {
+        int arr[] = {13, 46, 24, 52, 20, 9};
+        int n = arr.length;
+        System.out.println("Before Using insertion Sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        insertion_sort(arr, n);
+    }
+
+}
+TC: O(N)^2
+SC: O(1)  
+```
+Best Case Time Complexity:   
+
+The best case occurs if the given array is already sorted. And if the given array is already sorted, the outer loop will only run and the inner loop will run for 0 times. So, our overall time complexity in the best case will boil down to O(N), where N = size of the array.  
+
 
 
 
