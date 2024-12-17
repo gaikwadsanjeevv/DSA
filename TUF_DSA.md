@@ -1,5 +1,5 @@
 ## @ https://takeuforward.org/ Notes for DSA, Theory and Problems for Leetcode  
-## ⓒ TakeUForward : Raj Vikramaditya Sir  
+## ⓒ TakeUForward : Raj Vikramaditya  
 
 ### Basics C++  
 #### Basic Skeleton of Programme  
@@ -1827,6 +1827,153 @@ As we have learned the ‘for loop’, the first approach that should come to ou
 10^8 operations take 1 second to get executed.  
 In order to optimize this approach, we need to use hashing. If we say the definition of hashing in a naive way, it is nothing but the combination of the steps, pre-storing, and fetching.  
 ![image](https://github.com/user-attachments/assets/06f49d40-1557-4226-b286-ac0e112d2747)  
+
+
+#### Sorting :  
+<img width="614" alt="image" src="https://github.com/user-attachments/assets/8815a2fd-5d36-471d-9990-9aba4ce82715" />  
+
+The algorithm steps are as follows:  
+
+First, we will select the range of the unsorted array using a loop (say i) that indicates the starting index of the range.  
+The loop will run forward from 0 to n-1. The value i = 0 means the range is from 0 to n-1, and similarly, i = 1 means the range is from 1 to n-1, and so on.  
+(Initially, the range will be the whole array starting from the first index.)  
+Now, in each iteration, we will select the minimum element from the range of the unsorted array using an inner loop.  
+After that, we will swap the minimum element with the first element of the selected range(in step 1).   
+Finally, after each iteration, we will find that the array is sorted up to the first index of the range. 
+
+  ```java
+import java.util.*;
+
+public class tUf {
+    static void selection_sort(int arr[], int n) {
+        for (int i = 0; i < n - 1; i++) {
+            int mini = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[mini]) {
+                    mini = j;
+                }
+            }
+            //swap
+            int temp = arr[mini];
+            arr[mini] = arr[i];
+            arr[i] = temp;
+        }
+
+        System.out.println("After selection sort:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String args[]) {
+
+        int arr[] = {13, 46, 24, 52, 20, 9};
+        int n = arr.length;
+        System.out.println("Before selection sort:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        selection_sort(arr, n);
+
+Time complexity: O(N)^2
+Space Complexity: O(1)
+    }
+}
+
+
+```
+### Bubble Sort:  
+Bubble Sort is a simple sorting algorithm that works by repeatedly comparing adjacent elements in an array and swapping them if they are in the wrong order. It is called "bubble sort" because the larger elements "bubble" to the end of the array with each pass.  
+In Bubble Sort, the term "bubble" refers to the way larger elements gradually "float" or "rise" to their correct position at the end of the array, similar to bubbles rising to the surface of water.  
+
+```java
+import java.util.*;
+
+public class tUf {
+    static void bubble_sort(int[] arr, int n) {
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = 0; j <= i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("After bubble sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String args[]) {
+        int arr[] = {13, 46, 24, 52, 20, 9};
+        int n = arr.length;
+        System.out.println("Before Using Bubble Sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        bubble_sort(arr, n);
+    }
+
+}
+TC: O(N)^2
+SC: O(1)  
+
+```
+#### Optimized approach (Reducing time complexity for the best case):  
+The best case occurs if the given array is already sorted. We can reduce the time complexity to O(N) by just adding a small check inside the loops.   
+
+We will check in the first iteration if any swap is taking place. If the array is already sorted no swap will occur and we will break out from the loops.   
+Thus the iteration of the outer loop will be just 1. And our overall time complexity will be O(N).  
+
+```java
+import java.util.*;
+
+public class tUf {
+    static void bubble_sort(int[] arr, int n) {
+        for (int i = n - 1; i >= 0; i--) {
+            int didSwap = 0;
+
+            for (int j = 0; j <= i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    didSwap = 1;
+                }
+            }
+            if (didSwap == 0) {
+                break;
+            }
+        }
+
+        System.out.println("After bubble sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String args[]) {
+        int arr[] = {13, 46, 24, 52, 20, 9};
+        int n = arr.length;
+        System.out.println("Before Using Bubble Sort: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        bubble_sort(arr, n);
+    }
+
+}
+TC: O(N)^2 for the wordst and average cases and O(N) for the best case
+SC: O(1)  
+```
+
 
 
 
