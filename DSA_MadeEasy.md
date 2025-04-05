@@ -95,6 +95,56 @@ Rule 4: Consider different variable for different inputs
 Rule 5: Remove all non-dominants  
 ![image](https://github.com/user-attachments/assets/e6faca07-82ed-4f7b-820e-3aa934814d93)  
 
+#### Big O(n^2)  
+```java
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numList = Arrays.asList(1, 2, 3, 4, 5, 6, 7); // O(n)
+        int result = randomFunction(numList);
+        System.out.println(result);
+    }
+
+    public static int randomFunction(List<Integer> numList) {
+        int total = 0; // O(1)
+
+        for (int num1 : numList) {            // O(n)
+            for (int num2 : numList) {        // O(n)
+                System.out.println(num1 + ", " + num2); // O(1)
+                total += 1;                   // O(1)
+            }
+        }
+
+        return total; // O(1)
+    }
+}
+```
+![image](https://github.com/user-attachments/assets/f78bc332-2705-4188-8fe8-7515b506f57b)
+
+##### Rule 5 Removing non-dominant  
+![image](https://github.com/user-attachments/assets/f616bc91-3ec7-4318-a627-ceea24d69edc)  
+
+##### Space Complexity
+Space complexity of an algorithm represents the amount of extra memory space needed the algorithm in its life cycle.  
+
+We usually have 2 type of space requirement,  
+
+To store our input data  
+
+Extra space that we need to execute our program.  
+![image](https://github.com/user-attachments/assets/20d9804d-cf02-4367-909a-4ac2a237865d) 
+
+![image](https://github.com/user-attachments/assets/67ea5b90-e7d7-4a64-87c0-4648a2a3fce8)  
+![image](https://github.com/user-attachments/assets/59cad49a-2ef4-449f-9b99-d23a2676e55f)  
+- If im overwriting each element and storing in the space im taking only O(1) space.
+#### If we want to have a good code:  
+![image](https://github.com/user-attachments/assets/c803b1f2-a0bf-496f-a4ac-5d47cf6dfd05)  
+
+
+
+
+
 
 
 
