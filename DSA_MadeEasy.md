@@ -155,6 +155,38 @@ Wen we store array elements
 ![image](https://github.com/user-attachments/assets/2f1b8a82-03d3-422e-bc8f-0110c959d0aa)  
 ![image](https://github.com/user-attachments/assets/f9a05b00-e3ea-4ba6-8092-918ec854568f)  
 ![image](https://github.com/user-attachments/assets/e9070fec-2820-4a22-8d94-3fac4a8719de)  
+- Traversal -  is visitng each and every elements of array. so its TC-  Big O(n) - Linear
+```java
+public class CheckTen {
+    public static void main(String[] args) {
+        int[] numbers = {5, 8, 10, 23, 7};
+
+        boolean found = false;
+
+        // Enhanced for-loop to traverse the array
+        for (int num : numbers) {
+            if (num == 10) {
+                found = true;
+                break; // Exit loop early if found
+            }
+        }
+
+        // Print result
+        if (found) {
+            System.out.println("10 is found in the array.");
+        } else {
+            System.out.println("10 is NOT found in the array.");
+        }
+    }
+}
+```
+- Insertion at first, mid or end of array.
+![image](https://github.com/user-attachments/assets/21aec037-b1b5-43a9-a2bd-b29dd84bc19f)
+![image](https://github.com/user-attachments/assets/1d11cc99-8670-4ac5-8ab3-b57ac5a271bf)
+![image](https://github.com/user-attachments/assets/b294949d-f05e-4c5e-9f36-ddedf037c8ce)
+
+
+
 
 
 
