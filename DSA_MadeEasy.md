@@ -140,6 +140,25 @@ Extra space that we need to execute our program.
 - If im overwriting each element and storing in the space im taking only O(1) space.
 #### If we want to have a good code:  
 ![image](https://github.com/user-attachments/assets/c803b1f2-a0bf-496f-a4ac-5d47cf6dfd05)  
+#### Arrays  
+-  Static - Fixed number of memory slot.
+- Bynamic- Flexible number of memory slot.
+- 4 Operations
+  Access
+  Search
+  Insert
+  Delete
+##### Accessing  
+Time Complexity - O(1)  
+Wen we store array elements 
+![image](https://github.com/user-attachments/assets/da984d2e-06ba-46c3-b14f-413970513731)
+![image](https://github.com/user-attachments/assets/2f1b8a82-03d3-422e-bc8f-0110c959d0aa)  
+![image](https://github.com/user-attachments/assets/f9a05b00-e3ea-4ba6-8092-918ec854568f)  
+![image](https://github.com/user-attachments/assets/e9070fec-2820-4a22-8d94-3fac4a8719de)  
+
+
+
+
 
 
 
