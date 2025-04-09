@@ -216,12 +216,15 @@ So each node = 8 bytes total**
 ![image](https://github.com/user-attachments/assets/53a21526-e6e0-42da-a092-b08b7c355659)  
 #### Doubly linked List.  
 ![image](https://github.com/user-attachments/assets/2716f412-7bea-4ea0-b179-edd1108ccf94)  
-🔁 1. Definition
-            Singly Linked List                                                    Doubly Linked List  
-Structure:	Each node points only to the next node                	Each node points to both next and previous nodes  
-Navigation	Only forward traversal	                                Forward and backward traversal supported  
-Singly Linked List Node:                                                        Doubly Linked List Node:
-class Node { int data; Node next;}                                   class Node {int data; Node next; Node prev;}  
+![image](https://github.com/user-attachments/assets/60578958-0221-4ebf-9f77-387839b2e8f6)  
+![image](https://github.com/user-attachments/assets/e1810fef-c1a3-40cf-8d16-d0e1bc8b4a3c)  
+![image](https://github.com/user-attachments/assets/6c75e4f3-fce5-4177-9019-0c1952d490cc)  
+![image](https://github.com/user-attachments/assets/62999b42-7bff-4e5f-9087-75e2c23c2d4e)  
+![image](https://github.com/user-attachments/assets/5761980b-57ed-4c63-8d13-62bd826c350f)  
+
+
+
+
 
 
 
