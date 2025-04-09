@@ -185,6 +185,48 @@ public class CheckTen {
 ![image](https://github.com/user-attachments/assets/1d11cc99-8670-4ac5-8ab3-b57ac5a271bf)
 ![image](https://github.com/user-attachments/assets/b294949d-f05e-4c5e-9f36-ddedf037c8ce)
 
+#### Data Structure Linked List.  
+Definition:
+- A Linked List in Java is a linear data structure where each element (called a node) contains a data field and a reference (link) to the next node in the sequence.  
+
+📦 Key Features:  
+Elements are not stored in contiguous memory (unlike arrays).  
+Supports dynamic memory allocation — grows and shrinks as needed.  
+Efficient at insertion and deletion at the beginning or middle.  
+Not efficient for random access (O(n) time to access element at index).  
+
+🧱 Types of Linked Lists:  
+Singly Linked List – Nodes point only to the next node.  
+Doubly Linked List – Nodes point to both next and previous nodes.  
+Circular Linked List – Last node points back to the first node.  
+
+![image](https://github.com/user-attachments/assets/1c0444fc-d371-4772-919f-1b7d0d0f981f)  
+#### Linked List memory space representation.  
+![image](https://github.com/user-attachments/assets/4d06bb5a-e57a-4ed4-82b2-e771ffb54b1e)  
+Memory Layout Explanation (Example Memory: 600–648)  
+Each node in a singly linked list contains:  
+Data field (e.g., the number: 3, 7, 2, 9)  
+Next pointer (e.g., a memory address of the next node)  
+We assume:  
+4 bytes for an integer  
+4 bytes for the pointer (memory address of the next node)  
+So each node = 8 bytes total**  
+- If im calling element head i call it has Head.next, for next Head.next.next.
+#### Single Linked list.  
+![image](https://github.com/user-attachments/assets/53a21526-e6e0-42da-a092-b08b7c355659)  
+#### Doubly linked List.  
+![image](https://github.com/user-attachments/assets/2716f412-7bea-4ea0-b179-edd1108ccf94)  
+🔁 1. Definition
+            Singly Linked List                                                    Doubly Linked List  
+Structure:	Each node points only to the next node                	Each node points to both next and previous nodes  
+Navigation	Only forward traversal	                                Forward and backward traversal supported  
+Singly Linked List Node:                                                        Doubly Linked List Node:
+class Node { int data; Node next;}                                   class Node {int data; Node next; Node prev;}  
+
+
+
+
+
 
 
 
