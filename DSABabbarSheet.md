@@ -290,10 +290,10 @@ int main() {
     }
 }
 ```
-111
-222
-333
-444
+111  
+222  
+333  
+444  
 ```c++
 #include<iostream>
 using namespace std;
@@ -316,5 +316,55 @@ int main() {
     }
 }
 ```
+1234  
+1234  
+1234  
+1234  
+```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    
+    int n;
+    cin >> n;
+    
+    int i = 1;
+    while(i<=n) {
+        int j = 1;
+        while(j <= n) {
+            cout << j;
+            j++;
+        }
+        cout<< endl;
+        i++;
+    }  
+    return 0;
+}
+```
+321  
+321  
+321  
+```c++
+#include<iostream>
+using namespace std;
 
+int main() {
+    
+    int n;
+    cin >> n;
+    
+    int i = 1;
+    while(i<=n) {
+        int j = 1;
+        while(j <= n) {
+            cout << n-j+1 <<"\t";
+            j++;
+        }
+        cout<< endl;
+        i++;
+    }
+  return 0;
+}
+lec 4 3:35
+```
