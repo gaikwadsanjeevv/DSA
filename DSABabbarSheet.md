@@ -187,5 +187,134 @@ A || B : 1
 !B : 1
 
 ```
+#### if-else  
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    a = 5;
+    b = 6;
+
+    if (a > b) {
+        cout << "a is greater";
+    } else {
+        cout << "b is greater";
+    }
+
+    return 0;
+}
+```
+- If we use cin >> ch;, it skips spaces, but cin.get(ch); captures them:
+  Why Use cin.get()?   
+It’s useful when:  
+You want to read whitespace (spaces, tabs, newlines).  
+You want to read a single character from the input stream.  
+You need to read a full line without skipping spaces.
+
+#### While Loop  
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i = 1; // initialization
+
+    cout << "While Loop:" << endl;
+    while (i <= 5) {       // condition
+        cout << i << " ";
+        i++;               // increment
+    }
+
+    return 0;
+}
+```
+#### For Loop  
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "For Loop:" << endl;
+    for (int i = 1; i <= 5; i++) {  // initialization; condition; increment
+        cout << i << " ";
+    }
+
+    return 0;
+}
+```
+#### Do-While Loop  
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i = 1;
+
+    cout << "Do-While Loop:" << endl;
+    do {
+        cout << i << " ";
+        i++;
+    } while (i <= 5);  // condition checked after loop body
+
+    return 0;
+}
+```
+## Patterns  
+****  
+****  
+****  
+****  
+row -  4  
+col - 4  
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    
+    int i = 1;
+    
+    while(i<=n) {
+        int j = 1;
+        while(j <= n){
+            cout << "*";
+            j++;
+        }
+        cout<<endl;
+        i++;
+    }
+}
+```
+111
+222
+333
+444
+```c++
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    
+    int i = 1;
+    
+    while(i<=n) {
+        int j = 1;
+        while(j <= n){
+            cout << i; //we are printing j here where elements are placed one after other like 111 so we dont need to put endl here
+            j++;
+        }
+        //above i completed my first row so to go next row i put endl and incremented i
+        cout<<endl;  
+        i++;
+    }
+}
+```
 
 
