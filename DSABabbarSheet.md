@@ -366,5 +366,63 @@ int main() {
     }
   return 0;
 }
-lec 4 3:35
+```
+1  
+2 3  
+4 5 6  
+7 8 9 10  
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;   // number of rows
+
+    int row = 1;
+    int count = 1;  // start counting from 1
+
+    while (row <= n) {
+        int col = 1;
+        while (col <= row) {
+            cout << count << " ";  // print the current number
+            count++;               // move to the next number
+            col++;
+        }
+        cout << endl;  // new line after each row
+        row++;
+    }
+
+    return 0;
+}
+```
+1  
+2 1  
+3 2 1  
+4 3 2 1  
+```c++
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    int n;
+    cin >> n;
+    
+    int row = 1;
+    while(row <= n){
+        int col = 1;
+        while(col <= row){
+            cout<<(row-col+1)<<" ";
+            col++;
+        }
+        cout<<endl;
+        row++;
+    }
+    
+    
+    
+    return 0;
+}
+lec 4 22:16
 ```
