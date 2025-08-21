@@ -476,3 +476,30 @@ int main() {
     }
 }
 ```
+A B C  
+D E F  
+G H I  
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    char ch = 'A';   // Starting from A
+    int row = 1;     // Row counter
+
+    while (row <= n) {     // 3 rows
+        int col = 1;       // Column counter
+        while (col <= n) { // 3 columns
+            cout << ch << " "; // Print letter with space
+            ch++;              // Move to next character
+            col++;             // Next column
+        }
+        cout << endl;      // New line after each row
+        row++;             // Next row
+    }
+
+    return 0;
+}
+```
