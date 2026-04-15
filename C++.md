@@ -59,4 +59,35 @@
 - Performance differences are more visible, helping better understanding of complexity.  
 - C++ is used in real-world systems like databases, game engines, and operating systems.  
 - It builds strong fundamentals in memory and performance concepts.  
-- It improves problem-solving efficiency and speed during interviews.  
+- It improves problem-solving efficiency and speed during interviews.
+
+  ## C++ For DSA
+
+### Summary of 1.3 (Structure of a C++ Program)
+
+- A C++ program follows a fixed structure including headers, main function, and statements.  
+- The execution of a program always starts from the `main()` function.  
+- `#include` is a preprocessor directive used to include header files before compilation.  
+- Header files provide predefined functions and utilities required in the program.  
+- `<iostream>` is a standard header file used for input and output operations.  
+- Preprocessing is the step that runs before compilation and processes directives like `#include`.  
+- `using namespace std;` allows direct use of standard library features without prefixing `std::`.  
+- `std` is a namespace that contains all standard C++ library components.  
+- Without using namespace, you must write `std::cout` and `std::cin`.  
+- A namespace helps avoid naming conflicts between different libraries.  
+- `int main()` defines the entry point of the program.  
+- Every valid C++ program must contain a `main()` function.  
+- The return type `int` means the function returns an integer value.  
+- Curly braces `{}` define the body of the function where code is written.  
+- `cout` is used to print output to the console.  
+- The `<<` operator is used to send data to the output stream.  
+- `return 0;` is used to terminate the program successfully.  
+- Returning 0 indicates successful execution to the operating system.  
+- Program execution flow includes preprocessing, compilation, execution from main, and termination.  
+- Statements inside `main()` are executed line by line.  
+- A minimal program can omit `return 0` in modern C++ standards.  
+- Missing semicolons is one of the most common beginner mistakes.  
+- Forgetting header files leads to compilation errors.  
+- Writing code outside the `main()` function causes errors.  
+- Competitive programming often uses `#include <bits/stdc++.h>` to include all libraries.  
+- Proper structure is essential for writing correct and executable C++ programs.  
